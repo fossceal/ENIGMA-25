@@ -308,25 +308,25 @@ body {
 .date-section {
   flex: 1;
   text-align: center;
+  position: relative;
 }
 
 .date-number {
-  font-size: 12rem;
+  font-size: clamp(4rem, 10vw, 12rem);
   font-weight: 900;
   color: white;
   line-height: 0.8;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  position: absolute;
+  position: static;
   top: 75px;
 }
 
 .date-day {
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 4rem);
   color: #2d3748;
   margin-top: 1rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  position: absolute;
+  position: static;
   top: 185px;
   left: 120px;
 }
@@ -510,12 +510,39 @@ body {
   }
 
   .robot-character {
-    left: 5%;
     transform: translateY(-50%) scale(0.8);
+    -webkit-transform: translateY(-50%) scale(0.8);
+    -moz-transform: translateY(-50%) scale(0.8);
+    -ms-transform: translateY(-50%) scale(0.8);
+    -o-transform: translateY(-50%) scale(0.8);
   }
 
   .strawberry-character {
     right: 5%;
+    max-width: 60px;
     transform: scale(0.8);
+  }
+}
+@media (max-width: 500px) {
+  .robot-character {
+    transform: translateY(-50%) scale(0.6);
+    left: 2%;
+  }
+  .strawberry-character {
+    transform: scale(0.6);
+    right: 2%;
+    bottom: 10vw;
+  }
+}
+@media (max-width: 500px) {
+  .main-container {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  #tentacle {
+    display: none;
+    /*max-width: 300px;
+    height: auto;*/
   }
 }
