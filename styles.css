@@ -506,11 +506,7 @@ body {
     -o-transform: translateY(-50%) scale(0.8);
   }
 
-  .strawberry-character {
-    right: 5%;
-    max-width: 60px;
-    transform: scale(0.8);
-  }
+ 
 }
 
 @media (max-width: 500px) {
@@ -522,8 +518,13 @@ body {
   .strawberry-character {
     transform: scale(0.6);
     right: 2%;
-    bottom: 10vw;
-  }
+    bottom: 28vw;
+    max-width: 60px;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -o-transform: scale(0.6);
+}
 
   .date-number {
     position: static;
