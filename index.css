@@ -243,6 +243,7 @@
    .navbar-mobile {
      display: none
    }
+
    #copyright-btm {
      display: none;
    }
@@ -304,6 +305,24 @@
    gap: 8px;
  }
 
+ .cartoon-navbar ul li:nth-child(5) a {
+   background: #000000;
+   color: #fff;
+   box-shadow: 0 4px 0 #f57710;
+   font-weight: 700;
+ }
+
+
+ .cartoon-navbar ul li:nth-child(5) a:hover {
+   background: rgb(82, 82, 217);
+   color: white;
+   transform: translateY(-3px);
+  box-shadow: 0 4px 0 #000000;
+
+
+ }
+
+
  .cartoon-navbar ul li a:hover {
    transform: translateY(-3px);
    background: #ff9966;
@@ -316,6 +335,7 @@
    .cartoon-navbar {
      display: block;
    }
+
    #copyright-btm {
      display: none;
    }
@@ -356,8 +376,132 @@
    #copyright {
      display: none;
    }
+
    #copyright-btm {
-      display: block;
-      text-align: center;
+     display: block;
+     text-align: center;
    }
  }
+
+ /* Collaborators Section */
+ .collaborators {
+   text-align: center;
+   padding: 3rem 1rem;
+   background: #fdf5c9;
+   /* match cartoon theme */
+ }
+
+ .collaborators h2 {
+   font-size: 2rem;
+   margin-bottom: 2rem;
+   color: #222;
+ }
+
+ .collab-logos {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 2rem;
+ }
+
+ .collab-logos img {
+   height: 50px;
+   /* keep logos small */
+   width: auto;
+   object-fit: contain;
+   filter: drop-shadow(2px 2px 0 #000);
+   /* cartoon effect */
+   transition: transform 0.3s ease;
+ }
+
+ .collab-logos img:hover {
+   transform: scale(1.1) rotate(-2deg);
+   /* fun hover */
+ }
+
+ /* Collaborators (drop this where your other CSS lives) */
+ .collaborators {
+   padding: 2.5rem 1rem;
+   background: #2e2e2d;
+   text-align: center;
+ }
+
+ .collaborators h2 {
+   font-size: 1.6rem;
+   color: #ffffff;
+ }
+
+ /* logos row */
+ .collab-logos {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 1rem;
+   align-items: center;
+ }
+
+ /* each logo wrapper — keeps logos small & consistent */
+ .logo-item {
+   width: 200px;
+   /* control visible size */
+   height: 56px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 6px;
+   border-radius: 8px;
+   overflow: hidden;
+ }
+
+ /* actual image sizing — will not exceed wrapper */
+ .logo-item img {
+   max-height: 300px;
+   max-width: 1000%;
+   object-fit: contain;
+   display: block;
+   width: 100%;
+   height: 800%;
+ }
+
+ .tink img {
+   width: 100%;
+   height: 800%;
+ }
+
+ /* responsive: smaller on very small screens */
+ @media (max-width: 420px) {
+   .logo-item {
+     width: 72px;
+     height: 46px;
+   }
+
+   .logo-item img {
+     max-height: 32px;
+   }
+ }
+
+ .create-partner {
+  text-align: center;
+}
+
+.create-partner img {
+  height: 60px;
+  margin-bottom: 8px;
+  filter: drop-shadow(2px 2px 0 #000);
+}
+
+.create-partner h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+#footer-phones a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: 0.3s;
+}
+#footer-phones a:hover {
+  color: #fff;
+  cursor: pointer;
+}
